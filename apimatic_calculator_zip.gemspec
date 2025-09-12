@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'sonia-barrera-sdk'
-  s.version = '0.0.1'
+  s.version = '3.0.0'
   s.summary = 'test'
   s.description = 'Vel dolores harum ip'
   s.authors = ['Zahra naseem']
