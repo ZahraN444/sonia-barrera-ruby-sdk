@@ -15,11 +15,11 @@ Represents the proxy server configurations for API calls.
 ## Usage Example
 
 ```ruby
-require 'apimatic_calculator_zip'
-include ApimaticCalculatorZip
+require 'apimatic_calculator'
+include ApimaticCalculator
 
 
-client = ApimaticCalculatorZip::Client.new(
+client = ApimaticCalculator::Client.new(
   proxy_settings: ProxySettings.new(
     address: "http://localhost",
     port: 8888,

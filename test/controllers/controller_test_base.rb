@@ -1,0 +1,29 @@
+# apimatic_calculator
+#
+# This file was automatically generated for dgfgfdg by
+# APIMATIC v3.0 ( https://www.apimatic.io ).
+
+require 'json'
+require 'minitest/autorun'
+require 'minitest/hell'
+require 'minitest/pride'
+require 'minitest/proveit'
+require 'apimatic_calculator'
+require_relative '../http_response_catcher'
+
+class ControllerTestBase < Minitest::Test
+  parallelize_me!
+  include ApimaticCalculator
+  include CoreLibrary
+
+  # Create configuration and set any test parameters
+  def create_configuration
+    Configuration.new(http_callback: HttpResponseCatcher.new)
+  end
+
+  # Initializes the base test controller
+  def setup_class
+    _config = create_configuration
+    @client = Client.new(config: _config)
+  end
+end

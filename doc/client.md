@@ -5,6 +5,7 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
+| environment | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
 | connection | `Faraday::Connection` | The Faraday connection object passed by the SDK user for making requests |
 | adapter | `Faraday::Adapter` | The Faraday adapter object passed by the SDK user for performing http requests |
 | timeout | `Float` | The value to use for connection timeout. <br> **Default: 60** |
@@ -19,13 +20,15 @@ The following parameters are configurable for the API Client:
 The API client can be initialized as follows:
 
 ```ruby
-require 'apimatic_calculator_zip'
-include ApimaticCalculatorZip
+require 'apimatic_calculator'
+include ApimaticCalculator
 
-client = Client.new
+client = Client.new(
+  environment: Environment::PRODUCTION
+)
 ```
 
-## APIMATIC Calculator - zip Client
+## APIMATIC Calculator Client
 
 The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
 
